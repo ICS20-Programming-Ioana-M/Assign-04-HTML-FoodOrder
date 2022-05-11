@@ -1,0 +1,19 @@
+body {
+  font-family: Lucida Handwriting, cursive;
+}
+
+h1 {
+  font-family: Lucida Handwriting, cursive;
+}
+
+table {
+  font-family: Lucida Handwriting, cursive;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  font-family: Lucida Handwriting, cursive;
+  text-align: left;
+  padding: 8px;
+}
