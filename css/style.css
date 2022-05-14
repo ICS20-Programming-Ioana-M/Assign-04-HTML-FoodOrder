@@ -1,9 +1,16 @@
+/*  
+Created by: Ioana
+Created on: May 12 2022
+CSS stylesheet for: Assign-04-HTML-FoodOrder
+*/
+
 body {
-  font-family: Lucida Handwriting, cursive;
+  background-color: firebrick;
+  color: #dec8cd;
 }
 
-h1 {
-  font-family: Lucida Handwriting, cursive;
+.mar{
+  margin: 50px;
 }
 
 table {
@@ -13,7 +20,10 @@ table {
 }
 
 td, th {
-  font-family: Lucida Handwriting, cursive;
   text-align: left;
   padding: 8px;
+}
+
+.font {
+  font-family: Lucida Handwriting, cursive;
 }

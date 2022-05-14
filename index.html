@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
 Created by: Ioana
-Created on: May 2 2022
-Unit4-01-HTML-GuessMyNumber
+Created on: May 12 2022
+Assign-04-HTML-FoodOrder
 -->
 <html>
   <head>
@@ -32,31 +32,123 @@ Unit4-01-HTML-GuessMyNumber
     <!-- MDL + JS -->
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-deep_orange.min.css" />
     <script src="./js/script.js"></script>
-
-    <!-- MDL Header -->
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Assign-04-HTML-FoodOrder</span>
-        </div>
-      </header>
     
     <!-- webpage title -->
     <center>
       <table>
         <tr>
           <td><img src="./images/My_Spoon.webp" height="100" width="auto"></td>
-          <td><u><h1 style="text-align: center;">The Big Ladle</h1></u></td>
+          <td><u><h1 class="font" style="text-align: center;">The Big Ladle</h1></u></td>
           <td><img src="./images/My_Spoon.webp" height="100" width="auto"></td>
         </tr>
       </table>
     </center>
 
-    <!-- formats page -->
-    <table>
-      
-    </table> 
-
     <!-- creates a margin in webpage -->
     <div class="mar">
+
+      <!-- formats page -->
+      <table>
+        <tr>
+          <th><u>Menu</u></th>
+          <th></th>
+          <th><u>Size</u></th>
+        </tr>
+        <tr>
+          <td>
+            <ul><li>Classic Chicken Noodle Soup --- $8</li></ul>
+          </td>
+          <!-- chicken noodle soup image -->
+          <td><img src="./images/ChickenNoodle.webp" alt="Chicken Noodle" height="200px" width="auto"></td>
+          <td><p>Small --- 1 cup</p></td>
+        </tr>
+        <tr>
+          <td>
+            <ul><li>Magnificent Minstrone Soup --- $9.00</li></ul>
+          </td>
+          <!-- minestrone soup image -->
+          <td><img src="./images/minestrone.jpg" alt="Minstrone" height="200px" width="auto"></td>
+          <td><p>Medium --- 2 cups, + $2</p></td>
+        </tr>
+        <tr>
+          <td>
+            <ul><li>Fantastic French Onion Soup --- $9.00</li></ul>
+          </td>
+          <!-- french onion soup image -->
+          <td><img src="./images/FrenchOnoin.jpg" alt="French onion" height="200px" width="auto"></td>
+          <td><p>Large --- 3 cups, + $3</p></td>
+        </tr>
+          <td>
+            <ul><li>Illustrious Itallian Wedding Soup --- $10.00</li></ul>
+          </td>
+        <!-- itallian wedding soup image -->
+        <td><img src="./images/italian-wedding-soup.webp" alt="Itallian Wedding" height="200px" width="auto"></td>
+        <td>
+          <!-- dropdown menu for size options -->
+          <form action="javascript:buttonClicked()">
+            <label for="size">Choose a size:</label>
+            <select name="size" id="size">
+              <option  value=".">>--- OPTIONS ---<</option>
+              <option value="small">SMALL</option>
+              <option value="medium">MEDIUM</option>
+              <option value="large">LARGE</option>
+            </select>
+            <br><br>
+           </form>
+        </td>
+        <tr>
+          <td>
+            <ul><li>tomato soup --- $6.69</li></ul>
+          </td>
+          <!-- tomato soup -->
+          <td><img src="./images/tomato.jpg" alt="tomato" height="200px" width="auto"></td>
+        </tr>
+        <tr>
+          <td>
+          <!-- dropdown menu for soup options -->
+            <form action="javascript:buttonClicked()">
+              <label for="soups">Choose a soup:</label>
+              <select name="soups" id="soups">
+                <option value="">>--- OPTIONS ---<</option>
+                <option value="chicken-noodle">Chicken Noodle</option>
+                <option value="minestrone">Minestrone</option>
+                <option value="french-onion">French Onion</option>
+                <option alue="itallian-wedding">Itallian Wedding</option>
+                <option value="tomato">tomato</option>
+              </select>
+              <br><br>
+            </form>
+          </td>
+        </tr>
+      </table>
+
+      <table> 
+        <tr>
+          <td>
+            <!-- Accent-colored raised button with ripple -->
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="buttonClicked()">
+              Button
+            </button>
+          </td>
+          <td>
+            <pre class="font">
+              _______________________________
+              |                                            |
+              |  Soup: <span id="chosen-soup">                                </span>|
+              |  Size: <span id="chosen-size">                                 </span>|
+              |                                            |
+              |  Total: <span id="total">                               </span>|
+              |  Tax: <span id="tax">                                  </span>|
+              |                                            |
+              |  Subtotal: <span id="subtotal">                          </span>|
+              |                                            |
+              |<u>                                           </u>|
+            </pre>
+          </td>
+        </tr>
+      </table>
+      <div class="font" id="no-choice-made"></div>
+      <br><br>
+    </div>
   </body>
 </html>
