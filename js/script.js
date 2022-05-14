@@ -76,9 +76,9 @@ function buttonClicked() {
   // displays noInput message
   document.getElementById('chosen-size').innerHTML = size;
   // displays total
-  document.getElementById('total').innerHTML = total;
+  document.getElementById('total').innerHTML = total.toFixted(2);
   // displays taxed
-  document.getElementById('tax').innerHTML = tax;
+  document.getElementById('tax').innerHTML = tax.toFixted(2);
   // displays noInput message
-  document.getElementById('subtotal').innerHTML = subtotal;
+  document.getElementById('subtotal').innerHTML = subtotal.toFixted(2);
 }
