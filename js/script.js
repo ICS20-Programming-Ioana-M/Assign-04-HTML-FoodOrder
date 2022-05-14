@@ -5,6 +5,7 @@ function buttonClicked() {
   // declared constants for tax, medium price and large price
   const MEDIUM = 2.00;
   const LARGE = 3.00;
+  const HST = 0.13;
 
   // variables for total and no input message
   let total = 0.00;
@@ -41,7 +42,7 @@ function buttonClicked() {
     if(size == 'medium'){
       total = total + MEDIUM;
       
-    } else if (size == large){
+    } else if (size == 'large'){
       total = total + LARGE;
     }
 
@@ -63,10 +64,21 @@ function buttonClicked() {
     }
   }
 
+  let tax = total * HST;
+  let subtotal = total + tax;
+
   
   
   // displays noInput message
   document.getElementById('no-choice-made').innerHTML = noInput;
   // displays noInput message
+  document.getElementById('chosen-soup').innerHTML = soup;
+  // displays noInput message
+  document.getElementById('chosen-size').innerHTML = size;
+  // displays total
   document.getElementById('total').innerHTML = total;
+  // displays taxed
+  document.getElementById('tax').innerHTML = tax;
+  // displays noInput message
+  document.getElementById('subtotal').innerHTML = subtotal;
 }
